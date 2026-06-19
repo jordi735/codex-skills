@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ship"
+  short_description: "Commit and push current work"
+  default_prompt: "Use $ship to sync with remote, commit all current changes with a detailed message, and push the branch."
+
+policy:
+  allow_implicit_invocation: false

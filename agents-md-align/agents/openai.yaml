@@ -1,0 +1,7 @@
+interface:
+  display_name: "AGENTS.md Align"
+  short_description: "Update AGENTS.md from project evidence"
+  default_prompt: "Use $agents-md-align to update the root AGENTS.md so it matches this project."
+
+policy:
+  allow_implicit_invocation: false

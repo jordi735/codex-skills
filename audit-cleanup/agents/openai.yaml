@@ -1,0 +1,7 @@
+interface:
+  display_name: "Audit Cleanup"
+  short_description: "Audit conventions, clean code, and module splits"
+  default_prompt: "Use $audit-cleanup to review this project for product conventions, cleanup, clean code, and module-split candidates without changing behavior."
+
+policy:
+  allow_implicit_invocation: false

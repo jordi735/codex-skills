@@ -1,0 +1,7 @@
+interface:
+  display_name: "Audit Full"
+  short_description: "Deep audit for bugs and dead code"
+  default_prompt: "Use $audit-full to run a deep codebase audit and produce a ranked report of confirmed bugs and cleanup findings."
+
+policy:
+  allow_implicit_invocation: false
