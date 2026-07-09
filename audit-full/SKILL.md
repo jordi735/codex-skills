@@ -5,7 +5,7 @@ description: "Thorough nested-agent audit of the current project for dead code, 
 
 # Audit
 
-Launch a thorough, multi-stage project audit via nested Codex gpt-5.5 xhigh subagents. Produces a single ranked fix sheet at `/tmp/<project>-audit-report.md`. Does NOT modify any source code — the deliverable is a report the user applies manually.
+Launch a thorough, multi-stage project audit via nested Codex gpt-5.6-sol ultra subagents. Produces a single ranked fix sheet at `/tmp/<project>-audit-report.md`. Does NOT modify any source code — the deliverable is a report the user applies manually.
 
 ---
 
@@ -75,12 +75,12 @@ are production code and must be included.
 
 ### 2. Per-Domain Coordination
 
-Launch one domain coordinator gpt-5.5 xhigh subagent per domain, in parallel. Each
+Launch one domain coordinator gpt-5.6-sol ultra subagent per domain, in parallel. Each
 coordinator owns exactly one domain.
 
 Each domain coordinator should:
 - inspect only the assigned domain paths, plus cross-references needed to verify usage
-- launch specialist child gpt-5.5 xhigh agents in parallel
+- launch specialist child gpt-5.6-sol ultra agents in parallel
 - wait for specialist results
 - launch one verifier/merger child for the entire domain
 - return only the verified domain findings packet to the root agent
@@ -92,7 +92,7 @@ in the parent response.
 
 ### 3. Specialist Auditors
 
-Within each domain coordinator, launch specialist child gpt-5.5 xhigh agents for:
+Within each domain coordinator, launch specialist child gpt-5.6-sol ultra agents for:
 - correctness bugs
 - code quality findings covering DEAD, YAGNI, DRY, and KISS
 
@@ -292,4 +292,4 @@ After final synthesis completes:
 - Launch sibling agents in parallel whenever their work is independent.
 - If a subagent fails, its parent records which role failed and continues with available findings. The final report must note partial audit coverage.
 - Each subagent prompt must be self-contained and include the Reality Filter, plus concrete values for `<cwd>`, `<PROJECT_NAME>`, and any `<domain.*>` placeholders.
-- All agents must be gpt-5.5 xhigh
+- All agents must be gpt-5.6-sol ultra

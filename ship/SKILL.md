@@ -53,13 +53,13 @@ Each bullet should describe one logical change (a file or group of related files
 
 ### 5. Commit
 
-Create the commit using a HEREDOC to preserve formatting. End every commit message with the trailer `Co-Authored-By: Codex <gpt-5.5 xhigh>` — **not** the model-versioned default from your Bash tool instructions:
+Create the commit using a HEREDOC to preserve formatting. End every commit message with the trailer `Co-Authored-By: Codex <gpt-5.6-sol ultra>` — **not** the model-versioned default from your Bash tool instructions:
 
 ```bash
 git commit -m "$(cat <<'EOF'
 <message here>
 
-Co-Authored-By: Codex <gpt-5.5 xhigh>
+Co-Authored-By: Codex <gpt-5.6-sol ultra>
 EOF
 )"
 ```
