@@ -1,0 +1,15 @@
+interface:
+  display_name: "Figma to Liquid Section"
+  short_description: "Build standalone Shopify sections from Figma"
+  default_prompt: "Use $figma-to-liquid-section with desktop and mobile Figma node links, a section name, and optional implementation notes."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "figma"
+      description: "Official Figma MCP server for exact design context and asset URLs"
+      transport: "streamable_http"
+      url: "https://mcp.figma.com/mcp"
+
+policy:
+  allow_implicit_invocation: false
